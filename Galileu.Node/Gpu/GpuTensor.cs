@@ -20,6 +20,8 @@ namespace Galileu.Node.Gpu
         internal Mem Buffer { get; private set; }
         private static readonly ArrayPool<byte> IoBufferPool = ArrayPool<byte>.Shared;
         private static readonly ArrayPool<float> IoFloatBufferPool = ArrayPool<float>.Shared; // ✅ NOVO
+        private static readonly ArrayPool<byte> ByteBufferPool = ArrayPool<byte>.Shared;
+        private static readonly ArrayPool<float> FloatBufferPool = ArrayPool<float>.Shared;
         private readonly Context _context;
         private readonly CommandQueue _commandQueue;
         private readonly GpuSyncGuard _syncGuard; // ✅ NOVO: Guard de sincronização
@@ -160,74 +162,87 @@ namespace Galileu.Node.Gpu
             }
         }
 
-        /// <summary>
-        /// ✅ VERSÃO CORRIGIDA FINAL: ReadFromStream com ZERO retenção.
-        /// </summary>
         public unsafe void ReadFromStream(BinaryReader reader, long length)
+{
+    if (length != Length)
+        throw new InvalidDataException($"Tamanho inconsistente: {length} vs {Length}");
+
+    int byteSize = (int)(length * sizeof(float));
+    if (byteSize == 0) return;
+
+    // ✅ Variáveis para rastrear buffers alugados
+    byte[] rentedByteBuffer = null;
+    float[] rentedFloatBuffer = null;
+
+    lock (_syncLock)
+    {
+        try
         {
-            if (length != Length)
-                throw new InvalidDataException($"Tamanho inconsistente: {length} vs {Length}");
+            _syncGuard.SynchronizeBeforeRead($"PreRead[{GetTensorId()}]");
+            Flush(_commandQueue);
 
-            int byteSize = (int)(length * sizeof(float));
-            if (byteSize == 0) return;
+            // ✅ MUDANÇA 1: Rent em vez de new
+            rentedByteBuffer = ByteBufferPool.Rent(byteSize);
+            rentedFloatBuffer = FloatBufferPool.Rent((int)length);
 
-            lock (_syncLock)
+            int bytesRead = reader.Read(rentedByteBuffer, 0, byteSize);
+            if (bytesRead != byteSize)
+                throw new EndOfStreamException($"Leitura incompleta: {bytesRead}/{byteSize}");
+
+            // ✅ Usa apenas a parte relevante (Rent pode retornar maior)
+            MemoryMarshal.Cast<byte, float>(rentedByteBuffer.AsSpan(0, byteSize))
+                .CopyTo(rentedFloatBuffer.AsSpan(0, (int)length));
+
+            GCHandle handle = GCHandle.Alloc(rentedFloatBuffer, GCHandleType.Pinned);
+
+            try
             {
-                // 🔥 ESTRATÉGIA 1: Sync ANTES
-                _syncGuard.SynchronizeBeforeRead($"PreRead[{GetTensorId()}]");
-                Flush(_commandQueue);
+                IntPtr hostPtr = handle.AddrOfPinnedObject();
 
-                // 🔥 ESTRATÉGIA 2: Aloca buffer de bytes para leitura
-                byte[] byteBuffer = new byte[byteSize];
-                int bytesRead = reader.Read(byteBuffer, 0, byteSize);
-                if (bytesRead != byteSize)
-                    throw new EndOfStreamException($"Leitura incompleta: {bytesRead}/{byteSize}");
+                ErrorCode error = EnqueueWriteBuffer(
+                    _commandQueue,
+                    Buffer,
+                    Bool.True,
+                    IntPtr.Zero,
+                    (IntPtr)byteSize,
+                    hostPtr,
+                    0,
+                    null,
+                    out Event writeEvent
+                );
 
-                // 🔥 ESTRATÉGIA 3: Converte bytes → float usando MemoryMarshal
-                float[] hostBuffer = new float[length];
-                MemoryMarshal.Cast<byte, float>(byteBuffer.AsSpan()).CopyTo(hostBuffer.AsSpan());
+                if (error != ErrorCode.Success)
+                    throw new OpenClException("Falha ao escrever GPU", error);
 
-                // Libera buffer de bytes imediatamente
-                byteBuffer = null;
-
-                GCHandle handle = GCHandle.Alloc(hostBuffer, GCHandleType.Pinned);
-
-                try
-                {
-                    IntPtr hostPtr = handle.AddrOfPinnedObject();
-
-                    // 🔥 ESTRATÉGIA 4: Escrita BLOQUEANTE
-                    ErrorCode error = EnqueueWriteBuffer(
-                        _commandQueue,
-                        Buffer,
-                        Bool.True, // BLOCKING
-                        IntPtr.Zero,
-                        (IntPtr)byteSize,
-                        hostPtr,
-                        0,
-                        null,
-                        out Event writeEvent
-                    );
-
-                    if (error != ErrorCode.Success)
-                        throw new OpenClException("Falha ao escrever GPU", error);
-
-                    // 🔥 ESTRATÉGIA 5: Wait + Release imediato
-                    WaitForEvents(1, new[] { writeEvent });
-                    ReleaseEvent(writeEvent);
-
-                    // 🔥 ESTRATÉGIA 6: Finish pós-escrita
-                    Finish(_commandQueue);
-                }
-                finally
-                {
-                    // 🔥 ESTRATÉGIA 7: Cleanup total
-                    if (handle.IsAllocated) handle.Free();
-                    hostBuffer = null;
-                    GC.Collect(0, GCCollectionMode.Forced, false);
-                }
+                WaitForEvents(1, new[] { writeEvent });
+                ReleaseEvent(writeEvent);
+                Finish(_commandQueue);
+            }
+            finally
+            {
+                if (handle.IsAllocated) handle.Free();
             }
         }
+        finally
+        {
+            // ✅ MUDANÇA 2: Return aos pools (CRÍTICO!)
+            if (rentedByteBuffer != null)
+            {
+                Array.Clear(rentedByteBuffer, 0, byteSize);
+                ByteBufferPool.Return(rentedByteBuffer);
+            }
+            
+            if (rentedFloatBuffer != null)
+            {
+                Array.Clear(rentedFloatBuffer, 0, (int)length);
+                FloatBufferPool.Return(rentedFloatBuffer);
+            }
+            
+            // ✅ MUDANÇA 3: Remove GC.Collect (desnecessário)
+            // GC.Collect(0, GCCollectionMode.Forced, false); // ← REMOVER
+        }
+    }
+}
 
         /// <summary>
         /// ✅ CORRIGIDO: Dispose com sincronização ANTES de liberar buffer.

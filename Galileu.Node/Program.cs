@@ -149,7 +149,7 @@ async Task BootstrapNodeAsync(IServiceProvider services, string[] args)
         var trainer = new Trainer(
             datasetPath,
             epochs: 25, // 25 épocas conforme requisito
-            learningRate: 0.00001f,
+            learningRate: 0.0001f,
             validationSplit: 0.1f,
             batchSize: 16 // Reduzido de 32 para 24 (menos memória)
         );

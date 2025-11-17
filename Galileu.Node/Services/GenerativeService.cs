@@ -60,7 +60,7 @@ public class GenerativeService
 
             try
             {
-                trainingModel.RunSanityCheckZeroRAM();
+                trainingModel.RunSanityCheck();
             }
             catch (Exception ex)
             {

@@ -78,7 +78,7 @@ namespace Galileu.Node.Brain
             _totalSwapOps++;
 
             // 🔥 CRÍTICO: Tensor é descartado IMEDIATAMENTE
-            tensor.Dispose();
+            //tensor.Dispose();
 
             return swapFile;
         }
@@ -268,8 +268,8 @@ namespace Galileu.Node.Brain
             {
                 if (File.Exists(swapFile))
                 {
-                    //File.Delete(swapFile);
-                    //_swapFiles.Remove(swapFile);
+                    File.Delete(swapFile);
+                    _swapFiles.Remove(swapFile);
                 }
             }
             catch (IOException ex)

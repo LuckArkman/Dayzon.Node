@@ -69,9 +69,6 @@ namespace Galileu.Node.Brain
 
             try
             {
-                // Passo 2: Escrever o tensor no disco.
-                // Usamos um FileStream com FileMode.CreateNew para garantir que a operação falhe
-                // se, por alguma razão improvável, o arquivo já existir (prevenindo corrupção de dados).
                 using (var fileStream = new FileStream(filePath, FileMode.CreateNew, FileAccess.Write, FileShare.None))
                 using (var writer = new BinaryWriter(fileStream))
                 {

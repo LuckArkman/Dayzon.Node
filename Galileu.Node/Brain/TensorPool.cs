@@ -16,9 +16,9 @@ public class TensorPool : IDisposable
 
     // === NOVOS PARÂMETROS DE CONTROLE DE MEMÓRIA ===
     private const int MAX_POOL_SIZE_PER_SHAPE = 64;  // Máximo de tensores por shape
-    private const long MAX_TOTAL_MEMORY_MB = 4096;    // 4GB limite total do pool
+    private const long MAX_TOTAL_MEMORY_BYTES = 2L * 1024 * 1024 * 1024; // 2GB máximo
     private int _operationsSinceLastTrim = 0;
-    private const int TRIM_INTERVAL = 1000;            // Auto-trim a cada 1000 operações
+    private const int TRIM_INTERVAL = 100;            // Auto-trim a cada 1000 operações
 
     public TensorPool(IMathEngine mathEngine)
     {
@@ -55,7 +55,7 @@ public IMathTensor Rent(int[] shape)
         else
         {
             // ✅ Verifica limite de memória ANTES de alocar
-            if (GetTotalMemoryUsageMB() > MAX_TOTAL_MEMORY_MB)
+            if (GetTotalMemoryUsageMB() > MAX_TOTAL_MEMORY_BYTES)
             {
                 Console.WriteLine($"[TensorPool] Limite de memória atingido, executando trim...");
                 TrimExcessMemory();
@@ -139,7 +139,7 @@ public IMathTensor Rent(int[] shape)
     private void TrimExcessMemory()
     {
         long currentMemoryMB = GetTotalMemoryUsageMB();
-        long targetMemoryMB = MAX_TOTAL_MEMORY_MB / 2; // Reduz para 50% do limite
+        long targetMemoryMB = MAX_TOTAL_MEMORY_BYTES / 2; // Reduz para 50% do limite
         
         if (currentMemoryMB <= targetMemoryMB)
             return;

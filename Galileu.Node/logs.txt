@@ -1,26 +1,27 @@
+Using launch settings from /home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Properties/launchSettings.json...
 Building...
-/usr/lib/dotnet/sdk/8.0.121/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.Shared.targets(111,5): warning NETSDK1080: A PackageReference to Microsoft.AspNetCore.App is not necessary when targeting .NET Core 3.0 or higher. If Microsoft.NET.Sdk.Web is used, the shared framework will be referenced automatically. Otherwise, the PackageReference should be replaced with a FrameworkReference. [/home/administrator/models/github/Dayson.Node/Galileu.Node/Galileu.Node.csproj]
-/home/administrator/models/github/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1904: Package 'Akka.Remote' 1.5.27 has a known critical severity vulnerability, https://github.com/advisories/GHSA-jhpv-4q4f-43g5
-/home/administrator/models/github/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1701: Package 'OpenCL.Net 2.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.
-/usr/lib/dotnet/sdk/8.0.121/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.Shared.targets(111,5): warning NETSDK1080: A PackageReference to Microsoft.AspNetCore.App is not necessary when targeting .NET Core 3.0 or higher. If Microsoft.NET.Sdk.Web is used, the shared framework will be referenced automatically. Otherwise, the PackageReference should be replaced with a FrameworkReference. [/home/administrator/models/github/Dayson.Node/Galileu.Node/Galileu.Node.csproj]
-/home/administrator/models/github/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1904: Package 'Akka.Remote' 1.5.27 has a known critical severity vulnerability, https://github.com/advisories/GHSA-jhpv-4q4f-43g5
-/home/administrator/models/github/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1701: Package 'OpenCL.Net 2.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.
- === Swagger Acess http://localhost:34857/swagger/index.html ===
+/usr/share/dotnet/sdk/9.0.300/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.Shared.targets(111,5): warning NETSDK1080: A PackageReference to Microsoft.AspNetCore.App is not necessary when targeting .NET Core 3.0 or higher. If Microsoft.NET.Sdk.Web is used, the shared framework will be referenced automatically. Otherwise, the PackageReference should be replaced with a FrameworkReference. [/home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Galileu.Node.csproj]
+/home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1904: Package 'Akka.Remote' 1.5.27 has a known critical severity vulnerability, https://github.com/advisories/GHSA-jhpv-4q4f-43g5
+/home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1701: Package 'OpenCL.Net 2.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.
+/usr/share/dotnet/sdk/9.0.300/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.Shared.targets(111,5): warning NETSDK1080: A PackageReference to Microsoft.AspNetCore.App is not necessary when targeting .NET Core 3.0 or higher. If Microsoft.NET.Sdk.Web is used, the shared framework will be referenced automatically. Otherwise, the PackageReference should be replaced with a FrameworkReference. [/home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Galileu.Node.csproj]
+/home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1904: Package 'Akka.Remote' 1.5.27 has a known critical severity vulnerability, https://github.com/advisories/GHSA-jhpv-4q4f-43g5
+/home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Galileu.Node.csproj : warning NU1701: Package 'OpenCL.Net 2.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.
+ === Swagger Acess http://localhost:45577/swagger/index.html ===
 info: Services.GossipService[0]
       Gossip Service iniciado. Fofocando a cada 15 segundos.
-[INFO][11/16/2025 03:51:08.175Z][Thread 0001][remoting (akka://Dyson-System)] Starting remoting
-[INFO][11/16/2025 03:51:08.498Z][Thread 0001][remoting (akka://Dyson-System)] Remoting started; listening on addresses : [akka.tcp://Dyson-System@localhost:44857]
-[INFO][11/16/2025 03:51:08.500Z][Thread 0001][remoting (akka://Dyson-System)] Remoting now listens on addresses: [akka.tcp://Dyson-System@localhost:44857]
-[Akka] Sistema de Atores iniciado em akka.tcp://Dyson-System@localhost:44857
+[INFO][11/17/2025 01:52:20.193Z][Thread 0001][remoting (akka://Dyson-System)] Starting remoting
+[INFO][11/17/2025 01:52:20.470Z][Thread 0001][remoting (akka://Dyson-System)] Remoting started; listening on addresses : [akka.tcp://Dyson-System@localhost:55577]
+[INFO][11/17/2025 01:52:20.471Z][Thread 0001][remoting (akka://Dyson-System)] Remoting now listens on addresses: [akka.tcp://Dyson-System@localhost:55577]
+[Akka] Sistema de Atores iniciado em akka.tcp://Dyson-System@localhost:55577
 info: Microsoft.Hosting.Lifetime[14]
-      Now listening on: http://localhost:34857
+      Now listening on: http://localhost:45577
 info: Microsoft.Hosting.Lifetime[0]
       Application started. Press Ctrl+C to shut down.
 info: Microsoft.Hosting.Lifetime[0]
       Hosting environment: Development
 info: Microsoft.Hosting.Lifetime[0]
-      Content root path: /home/administrator/models/github/Dayson.Node/Galileu.Node
-[Registry] Nó specialized-node-36becd7d em http://localhost:34857 registrado.
+      Content root path: /home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node
+[Registry] Nó specialized-node-227d11da em http://localhost:45577 registrado.
 Iniciando registro com o Orquestrador em http://localhost:5001...
 ERRO CRÍTICO no registro: Connection refused (localhost:5001). O nó não pode se juntar à rede e permanecerá em modo de espera.
 [GenerativeService] Usando GpuMathEngine para aceleração.
@@ -36,7 +37,7 @@ MODO: LONGO PRAZO (25 ÉPOCAS / 20 DIAS)
 [Config] Hidden Size: 192
 [Config] Embedding Size: 96
 [Config] Épocas: 25
-[Config] Learning Rate: 1E-05
+[Config] Learning Rate: 0.0001
 [Config] Batch Size: 16 (otimizado para memória)
 [Config] Validação: 10%
 [Config] META: RAM < 10GB durante 20 dias
@@ -48,16 +49,11 @@ Monitoramento de memória: ATIVO
 ========================================
 
 [GenerativeService] Arquitetura: Vocab=20000, Emb=96, Hidden=192
-[DiskSwap] 💾 Swap ativo em: /home/administrator/models/github/Dayson.Node/Galileu.Node/Dayson/Swap/session_20251116_035110_250d2e6664de4b43a927c81d82dd9892
-[IndividualFileTensorManager] Sessão 'session_20251116_035110_250d2e6664de4b43a927c81d82dd9892' inicializada em: /home/administrator/models/github/Dayson.Node/Galileu.Node/Dayson/TensorCache/session_20251116_035110_250d2e6664de4b43a927c81d82dd9892
+[DiskSwap] 💾 Swap ativo em: /home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Dayson/Swap/session_20251117_015222_e30e1833049544a0882af658f25b875b
+[IndividualFileTensorManager] Sessão 'session_20251117_015222_e30e1833049544a0882af658f25b875b' inicializada em: /home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Dayson/TensorCache/session_20251117_015222_e30e1833049544a0882af658f25b875b
 ╔═══════════════════════════════════════════════════════════╗
-║   🔥 ZERO-RAM LSTM (100% DISK-BACKED)                   ║
+║   ⚡ Memória Gerenciada com Offloading de Cache          ║
 ╚═══════════════════════════════════════════════════════════╝
-[ZERO-RAM LSTM] Inicialização completa:
-  ├─ Tensores em disco: 25
-  ├─ Espaço em disco: 22 MB
-  └─ RAM usada (índices): 0 MB
-
 [VocabularyManager] Vocabulário carregado: 20000 tokens
 [VocabularyManager] Carregando vocabulario in Disco (máx: 20000 tokens)...
 
@@ -66,94 +62,261 @@ EXECUTANDO VALIDAÇÃO DE INTEGRIDADE DO MODELO
 ════════════════════════════════════════════════════════════════════════════════
 
 ╔═══════════════════════════════════════════════════════════╗
-║        🚀 INICIANDO VERIFICAÇÃO DE SANIDADE (ZERO-RAM)     ║
+║    🚀 INICIANDO VERIFICAÇÃO DE SANIDADE (FINAL)          ║
 ╚═══════════════════════════════════════════════════════════╝
 [Sanity Check] Usando dados sintéticos: Input={5,10}, Target={10,15}
 
 [Sanity Check] Fase 1/3: Executando Forward Pass...
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_021DCBEE]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_011997B9]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_03192747]
-[GpuSyncGuard] 🔴 ERRO CRÍTICO ao sincronizar [PreWriteToStream[1x192_00FE5C0B]]: Falha ao sincronizar GPU antes de leitura [PreWriteToStream[1x192_00FE5C0B]] (Código de Erro: InvalidCommandQueue)
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_03D5C3FE]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_00640768]
-[GpuSyncGuard] 🔴 ERRO CRÍTICO ao sincronizar [ScopeDispose_SanityCheckMaster]: Falha ao sincronizar GPU antes de leitura [ScopeDispose_SanityCheckMaster] (Código de Erro: InvalidCommandQueue)
-[TensorScope:SanityCheckMaster] ⚠️ Erro ao sincronizar antes de dispose: Falha ao sincronizar GPU antes de leitura [ScopeDispose_SanityCheckMaster] (Código de Erro: InvalidCommandQueue)
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_03A78CD4]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_01E55EA2]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_01361EED]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_037EC9F3]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_03021418]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_0225CDF8]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_01372D58]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_02616DDB]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x20000_01BE731C]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [192x20000_03A298F8]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_00419DC9]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [192x192_012F3D57]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [96x192_035D1A2F]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_01E42633]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [192x192_03C4CA11]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [96x192_01C44675]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_03F6A0A1]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [192x192_03EF0F39]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [96x192_00753B00]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_01627247]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [192x192_032B94C2]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [96x192_01A0309A]
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [20000x96_0049F867]
-[GpuSyncGuard] 🔴 ERRO CRÍTICO ao sincronizar [PostDispose_SanityCheckMaster]: Falha ao sincronizar GPU antes de leitura [PostDispose_SanityCheckMaster] (Código de Erro: InvalidCommandQueue)
-[TensorScope:SanityCheckMaster] ⚠️ Erro ao sincronizar após dispose: Falha ao sincronizar GPU antes de leitura [PostDispose_SanityCheckMaster] (Código de Erro: InvalidCommandQueue)
+[Sanity Check] Forward Pass concluído. Perda inicial: 9.9604
+[Sanity Check] Perda esperada (aleatória): ~9.9035
+
+[Sanity Check] Fase 2/3: Executando Backward Pass...
+[Sanity Check] Backward Pass concluído. 23 arquivos de gradiente gerados.
+[Sanity Check] Soma absoluta de todos os gradientes: 6.72E+003
+
+[Sanity Check] Fase 3/3: Executando Update Pass (Adam)...
+[Sanity Check] Update Pass concluído.
 
 ╔═══════════════════════════════════════════════════════════╗
-║         ❌ FALHA NA VERIFICAÇÃO DE SANIDADE!               ║
+║         ✅ VERIFICAÇÃO DE SANIDADE CONCLUÍDA COM SUCESSO!      ║
 ╚═══════════════════════════════════════════════════════════╝
-[Sanity Check] ERRO: Falha ao sincronizar GPU antes de leitura [PreWriteToStream[1x192_00FE5C0B]] (Código de Erro: InvalidCommandQueue)
+
 
 [Sanity Check] Executando limpeza de recursos...
-[GpuTensor] 🔴 VAZAMENTO DETECTADO: Tensor [1x192] não foi descartado explicitamente. Stack Trace da criação pode estar no log do GpuMemoryTracker.
-[GpuSyncGuard] 🔴 Falha ao sincronizar antes de dispose [1x192_00FE5C0B]
 [Sanity Check] Limpeza concluída.
+════════════════════════════════════════════════════════════════════════════════
 
-╔════════════════════════════════════════════════════════════╗
-║  FALHA NO SANITY CHECK - TREINAMENTO ABORTADO             ║
-╚════════════════════════════════════════════════════════════╝
+[GenerativeService] Memória estimada do modelo: ~137MB
 
-Motivo: Falha ao sincronizar GPU antes de leitura [PreWriteToStream[1x192_00FE5C0B]] (Código de Erro: InvalidCommandQueue)
+[GenerativeService] Iniciando treinamento com otimizações de memória...
+[DatasetService] Armazenamento de lotes BinaryTreeFileStorage inicializado em: /home/mplopes/Documentos/GitHub/Dayson.Node/Galileu.Node/Dayson/batches.bts
+[DatasetService] Iniciando processamento em streaming do dataset com contextWindowSize=6, batchSize=16...
+[DatasetService] Total de sequências a serem geradas: 810,363
+[DatasetService] Treino: 729,327 sequências | Validação: 81,036 sequências
+[DatasetService] Processamento em streaming concluído.
+[DatasetService] Dados de treino: 45583 lotes, Dados de validação: 5065 lotes
 
-[ERRO] Treinamento falhou: Falha ao sincronizar GPU antes de leitura [PreWriteToStream[1x192_00FE5C0B]] (Código de Erro: InvalidCommandQueue)
-Stack Trace:    at Galileu.Node.Gpu.GpuSyncGuard.SynchronizeBeforeRead(String context) in /home/administrator/models/github/Dayson.Node/Galileu.Node/Gpu/GpuSyncGuard.cs:line 47
-   at Galileu.Node.Gpu.GpuTensor.WriteToStream(BinaryWriter writer) in /home/administrator/models/github/Dayson.Node/Galileu.Node/Gpu/GpuTensor.cs:line 130
-   at Galileu.Node.Brain.DiskSwapManager.SwapOut(IMathTensor tensor, String label) in /home/administrator/models/github/Dayson.Node/Galileu.Node/Brain/DiskSwapManager.cs:line 65
-   at Galileu.Node.Brain.NeuralNetworkLSTM.ForwardPassZeroRAM(Int32[] inputIndices, Int32[] targetIndices, ModelWeights weights) in /home/administrator/models/github/Dayson.Node/Galileu.Node/Brain/NeuralNetworkLSTM.cs:line 281
-   at Galileu.Node.Brain.GenerativeNeuralNetworkLSTM.RunSanityCheckZeroRAM() in /home/administrator/models/github/Dayson.Node/Galileu.Node/Brain/GenerativeNeuralNetworkLSTM.cs:line 196
-   at Galileu.Node.Services.GenerativeService.<>c__DisplayClass8_0.<TrainModelAsync>b__0() in /home/administrator/models/github/Dayson.Node/Galileu.Node/Services/GenerativeService.cs:line 63
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
---- End of stack trace from previous location ---
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
-   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
---- End of stack trace from previous location ---
-   at Galileu.Node.Services.GenerativeService.TrainModelAsync(Trainer trainerOptions, Int32 vocabSize, Int32 embeddingSize, Int32 hiddenSize, Int32 contextWindow) in /home/administrator/models/github/Dayson.Node/Galileu.Node/Services/GenerativeService.cs:line 43
-   at Program.<<Main>$>g__BootstrapNodeAsync|0_6(IServiceProvider services, String[] args) in /home/administrator/models/github/Dayson.Node/Galileu.Node/Program.cs:line 204
-
-════════════════════════════════════════════════════════════
-RELATÓRIO FINAL - MEMORY MONITOR
-════════════════════════════════════════════════════════════
-Duração total: 0d 00h 00m
-Pico de RAM: 315MB
-Avisos: 0
-Críticos: 0
-✓ Memória mantida abaixo de 8GB - EXCELENTE
-════════════════════════════════════════════════════════════
-
-
-════════════════════════════════════════════════════════════
-RELATÓRIO FINAL - MEMORY MONITOR
-════════════════════════════════════════════════════════════
-Duração total: 0d 00h 00m
-Pico de RAM: 315MB
-Avisos: 0
-Críticos: 0
-✓ Memória mantida abaixo de 8GB - EXCELENTE
-════════════════════════════════════════════════════════════
-
+                                                           ═
+ÉPOCA 1/25 >> Learning Rate: 0.0001 >> 11/17/2025 1:55:13 AM
+                                                           ═
+[Trainer] Carregando pesos do modelo para a VRAM para a Época 1...
+[Trainer] Pesos do modelo carregados na VRAM e prontos para a época.
+Época: 1/25 | Lotes: 1/45583 | Perda do Lote: 9.8566
+Época: 1/25 | Lotes: 2/45583 | Perda do Lote: 9.8294
+Época: 1/25 | Lotes: 3/45583 | Perda do Lote: 9.8755
+Época: 1/25 | Lotes: 4/45583 | Perda do Lote: 9.8356
+Época: 1/25 | Lotes: 5/45583 | Perda do Lote: 9.8831
+Época: 1/25 | Lotes: 6/45583 | Perda do Lote: 9.8543
+Época: 1/25 | Lotes: 7/45583 | Perda do Lote: 9.8306
+Época: 1/25 | Lotes: 8/45583 | Perda do Lote: 9.8733
+Época: 1/25 | Lotes: 9/45583 | Perda do Lote: 9.8583
+Época: 1/25 | Lotes: 10/45583 | Perda do Lote: 9.8313
+Época: 1/25 | Lotes: 11/45583 | Perda do Lote: 9.8479
+Época: 1/25 | Lotes: 12/45583 | Perda do Lote: 9.8386
+Época: 1/25 | Lotes: 13/45583 | Perda do Lote: 9.8452
+Época: 1/25 | Lotes: 14/45583 | Perda do Lote: 9.8543
+Época: 1/25 | Lotes: 15/45583 | Perda do Lote: 9.8562
+Época: 1/25 | Lotes: 16/45583 | Perda do Lote: 9.8432
+Época: 1/25 | Lotes: 17/45583 | Perda do Lote: 9.8824
+Época: 1/25 | Lotes: 18/45583 | Perda do Lote: 9.8585
+Época: 1/25 | Lotes: 19/45583 | Perda do Lote: 9.8840
+Época: 1/25 | Lotes: 20/45583 | Perda do Lote: 9.8672
+Época: 1/25 | Lotes: 21/45583 | Perda do Lote: 9.8831
+Época: 1/25 | Lotes: 22/45583 | Perda do Lote: 9.8499
+Época: 1/25 | Lotes: 23/45583 | Perda do Lote: 9.8728
+Época: 1/25 | Lotes: 24/45583 | Perda do Lote: 9.8976
+Época: 1/25 | Lotes: 25/45583 | Perda do Lote: 9.8667
+Época: 1/25 | Lotes: 26/45583 | Perda do Lote: 9.8592
+Época: 1/25 | Lotes: 27/45583 | Perda do Lote: 9.8653
+Época: 1/25 | Lotes: 28/45583 | Perda do Lote: 9.8762
+Época: 1/25 | Lotes: 29/45583 | Perda do Lote: 9.8698
+Época: 1/25 | Lotes: 30/45583 | Perda do Lote: 9.8410
+Época: 1/25 | Lotes: 31/45583 | Perda do Lote: 9.8512
+Época: 1/25 | Lotes: 32/45583 | Perda do Lote: 9.8821
+Época: 1/25 | Lotes: 33/45583 | Perda do Lote: 9.8708
+Época: 1/25 | Lotes: 34/45583 | Perda do Lote: 9.8485
+Época: 1/25 | Lotes: 35/45583 | Perda do Lote: 9.8916
+Época: 1/25 | Lotes: 36/45583 | Perda do Lote: 9.8722
+Época: 1/25 | Lotes: 37/45583 | Perda do Lote: 9.8705
+Época: 1/25 | Lotes: 38/45583 | Perda do Lote: 9.8849
+Época: 1/25 | Lotes: 39/45583 | Perda do Lote: 9.8740
+Época: 1/25 | Lotes: 40/45583 | Perda do Lote: 9.8550
+Época: 1/25 | Lotes: 41/45583 | Perda do Lote: 9.8845
+Época: 1/25 | Lotes: 42/45583 | Perda do Lote: 9.8641
+Época: 1/25 | Lotes: 43/45583 | Perda do Lote: 9.8434
+Época: 1/25 | Lotes: 44/45583 | Perda do Lote: 9.8690
+Época: 1/25 | Lotes: 45/45583 | Perda do Lote: 9.8670
+Época: 1/25 | Lotes: 46/45583 | Perda do Lote: 9.8524
+Época: 1/25 | Lotes: 47/45583 | Perda do Lote: 9.8197
+Época: 1/25 | Lotes: 48/45583 | Perda do Lote: 9.8291
+Época: 1/25 | Lotes: 49/45583 | Perda do Lote: 9.8254
+Época: 1/25 | Lotes: 50/45583 | Perda do Lote: 9.8632
+Época: 1/25 | Lotes: 51/45583 | Perda do Lote: 9.8535
+Época: 1/25 | Lotes: 52/45583 | Perda do Lote: 9.8512
+Época: 1/25 | Lotes: 53/45583 | Perda do Lote: 9.8232
+Época: 1/25 | Lotes: 54/45583 | Perda do Lote: 9.8363
+Época: 1/25 | Lotes: 55/45583 | Perda do Lote: 9.8796
+Época: 1/25 | Lotes: 56/45583 | Perda do Lote: 9.8649
+Época: 1/25 | Lotes: 57/45583 | Perda do Lote: 9.8832
+Época: 1/25 | Lotes: 58/45583 | Perda do Lote: 9.8958
+Época: 1/25 | Lotes: 59/45583 | Perda do Lote: 9.8830
+Época: 1/25 | Lotes: 60/45583 | Perda do Lote: 9.8444
+Época: 1/25 | Lotes: 61/45583 | Perda do Lote: 9.8528
+Época: 1/25 | Lotes: 62/45583 | Perda do Lote: 9.8585
+Época: 1/25 | Lotes: 63/45583 | Perda do Lote: 9.8437
+Época: 1/25 | Lotes: 64/45583 | Perda do Lote: 9.8619
+Época: 1/25 | Lotes: 65/45583 | Perda do Lote: 9.8747
+Época: 1/25 | Lotes: 66/45583 | Perda do Lote: 9.8555
+Época: 1/25 | Lotes: 67/45583 | Perda do Lote: 9.8398
+Época: 1/25 | Lotes: 68/45583 | Perda do Lote: 9.8943
+Época: 1/25 | Lotes: 69/45583 | Perda do Lote: 9.8635
+Época: 1/25 | Lotes: 70/45583 | Perda do Lote: 9.8613
+Época: 1/25 | Lotes: 71/45583 | Perda do Lote: 9.8670
+Época: 1/25 | Lotes: 72/45583 | Perda do Lote: 9.9002
+Época: 1/25 | Lotes: 73/45583 | Perda do Lote: 9.8636
+Época: 1/25 | Lotes: 74/45583 | Perda do Lote: 9.8774
+Época: 1/25 | Lotes: 75/45583 | Perda do Lote: 9.8487
+Época: 1/25 | Lotes: 76/45583 | Perda do Lote: 9.8693
+Época: 1/25 | Lotes: 77/45583 | Perda do Lote: 9.8532
+Época: 1/25 | Lotes: 78/45583 | Perda do Lote: 9.8499
+Época: 1/25 | Lotes: 79/45583 | Perda do Lote: 9.8406
+Época: 1/25 | Lotes: 80/45583 | Perda do Lote: 9.8726
+Época: 1/25 | Lotes: 81/45583 | Perda do Lote: 9.8823
+Época: 1/25 | Lotes: 82/45583 | Perda do Lote: 9.8629
+Época: 1/25 | Lotes: 83/45583 | Perda do Lote: 9.8749
+Época: 1/25 | Lotes: 84/45583 | Perda do Lote: 9.8632
+Época: 1/25 | Lotes: 85/45583 | Perda do Lote: 9.8762
+Época: 1/25 | Lotes: 86/45583 | Perda do Lote: 9.8423
+Época: 1/25 | Lotes: 87/45583 | Perda do Lote: 9.8510
+Época: 1/25 | Lotes: 88/45583 | Perda do Lote: 9.8469
+Época: 1/25 | Lotes: 89/45583 | Perda do Lote: 9.8804
+Época: 1/25 | Lotes: 90/45583 | Perda do Lote: 9.8908
+Época: 1/25 | Lotes: 91/45583 | Perda do Lote: 9.8882
+Época: 1/25 | Lotes: 92/45583 | Perda do Lote: 9.8757
+Época: 1/25 | Lotes: 93/45583 | Perda do Lote: 9.8720
+Época: 1/25 | Lotes: 94/45583 | Perda do Lote: 9.8882
+Época: 1/25 | Lotes: 95/45583 | Perda do Lote: 9.9031
+Época: 1/25 | Lotes: 96/45583 | Perda do Lote: 9.8309
+Época: 1/25 | Lotes: 97/45583 | Perda do Lote: 9.8831
+Época: 1/25 | Lotes: 98/45583 | Perda do Lote: 9.8612
+Época: 1/25 | Lotes: 99/45583 | Perda do Lote: 9.8712
+Época: 1/25 | Lotes: 100/45583 | Perda do Lote: 9.8644
+Época: 1/25 | Lotes: 101/45583 | Perda do Lote: 9.8755
+Época: 1/25 | Lotes: 102/45583 | Perda do Lote: 9.8701
+Época: 1/25 | Lotes: 103/45583 | Perda do Lote: 9.8847
+Época: 1/25 | Lotes: 104/45583 | Perda do Lote: 9.8590
+Época: 1/25 | Lotes: 105/45583 | Perda do Lote: 9.8973
+Época: 1/25 | Lotes: 106/45583 | Perda do Lote: 9.8942
+Época: 1/25 | Lotes: 107/45583 | Perda do Lote: 9.8757
+Época: 1/25 | Lotes: 108/45583 | Perda do Lote: 9.9036
+Época: 1/25 | Lotes: 109/45583 | Perda do Lote: 9.8753
+Época: 1/25 | Lotes: 110/45583 | Perda do Lote: 9.8657
+Época: 1/25 | Lotes: 111/45583 | Perda do Lote: 9.9037
+Época: 1/25 | Lotes: 112/45583 | Perda do Lote: 9.8746
+Época: 1/25 | Lotes: 113/45583 | Perda do Lote: 9.9011
+Época: 1/25 | Lotes: 114/45583 | Perda do Lote: 9.8706
+Época: 1/25 | Lotes: 115/45583 | Perda do Lote: 9.8806
+Época: 1/25 | Lotes: 116/45583 | Perda do Lote: 9.8323
+Época: 1/25 | Lotes: 117/45583 | Perda do Lote: 9.8679
+Época: 1/25 | Lotes: 118/45583 | Perda do Lote: 9.9011
+Época: 1/25 | Lotes: 119/45583 | Perda do Lote: 9.8751
+Época: 1/25 | Lotes: 120/45583 | Perda do Lote: 9.8700
+Época: 1/25 | Lotes: 121/45583 | Perda do Lote: 9.8680
+Época: 1/25 | Lotes: 122/45583 | Perda do Lote: 9.8669
+Época: 1/25 | Lotes: 123/45583 | Perda do Lote: 9.8798
+Época: 1/25 | Lotes: 124/45583 | Perda do Lote: 9.8760
+Época: 1/25 | Lotes: 125/45583 | Perda do Lote: 9.9265
+Época: 1/25 | Lotes: 126/45583 | Perda do Lote: 9.8801
+Época: 1/25 | Lotes: 127/45583 | Perda do Lote: 9.8899
+Época: 1/25 | Lotes: 128/45583 | Perda do Lote: 9.9104
+Época: 1/25 | Lotes: 129/45583 | Perda do Lote: 9.8651
+Época: 1/25 | Lotes: 130/45583 | Perda do Lote: 9.8910
+Época: 1/25 | Lotes: 131/45583 | Perda do Lote: 9.8710
+Época: 1/25 | Lotes: 132/45583 | Perda do Lote: 9.8656
+Época: 1/25 | Lotes: 133/45583 | Perda do Lote: 9.8660
+Época: 1/25 | Lotes: 134/45583 | Perda do Lote: 9.8879
+Época: 1/25 | Lotes: 135/45583 | Perda do Lote: 9.8596
+Época: 1/25 | Lotes: 136/45583 | Perda do Lote: 9.8598
+Época: 1/25 | Lotes: 137/45583 | Perda do Lote: 9.8514
+Época: 1/25 | Lotes: 138/45583 | Perda do Lote: 9.9267
+Época: 1/25 | Lotes: 139/45583 | Perda do Lote: 9.8635
+Época: 1/25 | Lotes: 140/45583 | Perda do Lote: 9.8583
+Época: 1/25 | Lotes: 141/45583 | Perda do Lote: 9.8494
+Época: 1/25 | Lotes: 142/45583 | Perda do Lote: 9.9179
+Época: 1/25 | Lotes: 143/45583 | Perda do Lote: 9.9007
+Época: 1/25 | Lotes: 144/45583 | Perda do Lote: 9.9061
+Época: 1/25 | Lotes: 145/45583 | Perda do Lote: 9.8730
+Época: 1/25 | Lotes: 146/45583 | Perda do Lote: 9.8574
+Época: 1/25 | Lotes: 147/45583 | Perda do Lote: 9.8550
+Época: 1/25 | Lotes: 148/45583 | Perda do Lote: 9.8906
+Época: 1/25 | Lotes: 149/45583 | Perda do Lote: 9.8657
+Época: 1/25 | Lotes: 150/45583 | Perda do Lote: 9.8731
+Época: 1/25 | Lotes: 151/45583 | Perda do Lote: 9.9020
+Época: 1/25 | Lotes: 152/45583 | Perda do Lote: 9.8841
+Época: 1/25 | Lotes: 153/45583 | Perda do Lote: 9.8715
+Época: 1/25 | Lotes: 154/45583 | Perda do Lote: 9.8773
+Época: 1/25 | Lotes: 155/45583 | Perda do Lote: 9.8608
+Época: 1/25 | Lotes: 156/45583 | Perda do Lote: 9.8714
+Época: 1/25 | Lotes: 157/45583 | Perda do Lote: 9.8817
+Época: 1/25 | Lotes: 158/45583 | Perda do Lote: 9.8634
+Época: 1/25 | Lotes: 159/45583 | Perda do Lote: 9.8621
+Época: 1/25 | Lotes: 160/45583 | Perda do Lote: 9.8835
+Época: 1/25 | Lotes: 161/45583 | Perda do Lote: 9.8313
+Época: 1/25 | Lotes: 162/45583 | Perda do Lote: 9.8735
+Época: 1/25 | Lotes: 163/45583 | Perda do Lote: 9.8732
+Época: 1/25 | Lotes: 164/45583 | Perda do Lote: 9.8786
+Época: 1/25 | Lotes: 165/45583 | Perda do Lote: 9.8541
+Época: 1/25 | Lotes: 166/45583 | Perda do Lote: 9.8594
+Época: 1/25 | Lotes: 167/45583 | Perda do Lote: 9.8829
+Época: 1/25 | Lotes: 168/45583 | Perda do Lote: 9.8866
+Época: 1/25 | Lotes: 169/45583 | Perda do Lote: 9.8745
+Época: 1/25 | Lotes: 170/45583 | Perda do Lote: 9.8668
+Época: 1/25 | Lotes: 171/45583 | Perda do Lote: 9.8789
+Época: 1/25 | Lotes: 172/45583 | Perda do Lote: 9.8822
+Época: 1/25 | Lotes: 173/45583 | Perda do Lote: 9.9300
+Época: 1/25 | Lotes: 174/45583 | Perda do Lote: 9.8823
+Época: 1/25 | Lotes: 175/45583 | Perda do Lote: 9.8833
+Época: 1/25 | Lotes: 176/45583 | Perda do Lote: 9.8425
+Época: 1/25 | Lotes: 177/45583 | Perda do Lote: 9.8910
+Época: 1/25 | Lotes: 178/45583 | Perda do Lote: 9.9047
+Época: 1/25 | Lotes: 179/45583 | Perda do Lote: 9.8426
+Época: 1/25 | Lotes: 180/45583 | Perda do Lote: 9.8707
+Época: 1/25 | Lotes: 181/45583 | Perda do Lote: 9.8839
+Época: 1/25 | Lotes: 182/45583 | Perda do Lote: 9.8271
+Época: 1/25 | Lotes: 183/45583 | Perda do Lote: 9.8674
+Época: 1/25 | Lotes: 184/45583 | Perda do Lote: 9.9013
+Época: 1/25 | Lotes: 185/45583 | Perda do Lote: 9.8765
+Época: 1/25 | Lotes: 186/45583 | Perda do Lote: 9.8981
+Época: 1/25 | Lotes: 187/45583 | Perda do Lote: 9.8717
+Época: 1/25 | Lotes: 188/45583 | Perda do Lote: 9.8770
+Época: 1/25 | Lotes: 189/45583 | Perda do Lote: 9.8995
+Época: 1/25 | Lotes: 190/45583 | Perda do Lote: 9.8683
+Época: 1/25 | Lotes: 191/45583 | Perda do Lote: 9.8884
+Época: 1/25 | Lotes: 192/45583 | Perda do Lote: 9.9002
+Época: 1/25 | Lotes: 193/45583 | Perda do Lote: 9.8731
+Época: 1/25 | Lotes: 194/45583 | Perda do Lote: 9.8617
+Época: 1/25 | Lotes: 195/45583 | Perda do Lote: 9.8635
+Época: 1/25 | Lotes: 196/45583 | Perda do Lote: 9.8598
+Época: 1/25 | Lotes: 197/45583 | Perda do Lote: 9.8825
+Época: 1/25 | Lotes: 198/45583 | Perda do Lote: 9.8793
+Época: 1/25 | Lotes: 199/45583 | Perda do Lote: 9.8869
+Época: 1/25 | Lotes: 200/45583 | Perda do Lote: 9.8810
+Época: 1/25 | Lotes: 201/45583 | Perda do Lote: 9.8529
+Época: 1/25 | Lotes: 202/45583 | Perda do Lote: 9.8746
+Época: 1/25 | Lotes: 203/45583 | Perda do Lote: 9.8759
+Época: 1/25 | Lotes: 204/45583 | Perda do Lote: 9.9014
+Época: 1/25 | Lotes: 205/45583 | Perda do Lote: 9.8630
+Época: 1/25 | Lotes: 206/45583 | Perda do Lote: 9.8874
+Época: 1/25 | Lotes: 207/45583 | Perda do Lote: 9.8782
+Época: 1/25 | Lotes: 208/45583 | Perda do Lote: 9.8508
+Época: 1/25 | Lotes: 209/45583 | Perda do Lote: 9.8629
+Época: 1/25 | Lotes: 210/45583 | Perda do Lote: 9.8771
+Época: 1/25 | Lotes: 211/45583 | Perda do Lote: 9.8455
+Época: 1/25 | Lotes: 212/45583 | Perda do Lote: 9.8637
+Época: 1/25 | Lotes: 213/45583 | Perda do Lote: 9.8893
+Época: 1/25 | Lotes: 214/45583 | Perda do Lote: 9.9095
+Época: 1/25 | Lotes: 215/45583 | Perda do Lote: 9.8640
+Época: 1/25 | Lotes: 216/45583 | Perda do Lote: 9.8845
+Época: 1/25 | Lotes: 217/45583 | Perda do Lote: 9.8592
+Época: 1/25 | Lotes: 218/45583 | Perda do Lote: 9.8754
+Época: 1/25 | Lotes: 219/45583 | Perda do Lote: 9.8715
